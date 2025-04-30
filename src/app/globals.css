@@ -5,22 +5,121 @@
   --foreground: #171717;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-josefin: var(--font-josefin);
+  --font-caveat: var(--font-caveat);
+  --color-nav: #578fca;
+  --color-buttons: #3674b5;
+  --color-buttons-hoover: #79bcd6;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-josefin), sans-serif;
 }
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes cloud1 {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(calc(100vw - 50%), calc(100vh - 50%));
+  }
+}
+
+@keyframes cloud2 {
+  0% {
+    transform: translate(50%, -50%);
+  }
+  100% {
+    transform: translate(calc(-100vw + 50%), calc(100vh - 50%));
+  }
+}
+
+@keyframes cloud3 {
+  0% {
+    transform: translate(-50%, 50%);
+  }
+  100% {
+    transform: translate(calc(100vw - 50%), calc(-100vh + 50%));
+  }
+}
+
+@keyframes cloud4 {
+  0% {
+    transform: translate(50%, 50%);
+  }
+  100% {
+    transform: translate(calc(-100vw + 50%), calc(-100vh + 50%));
+  }
+}
+
+@layer utilities {
+  .animate-cloud1 {
+    animation: cloud1 30s linear infinite alternate;
+  }
+  .animate-cloud2 {
+    animation: cloud2 35s linear infinite alternate;
+  }
+  .animate-cloud3 {
+    animation: cloud3 40s linear infinite alternate;
+  }
+  .animate-cloud4 {
+    animation: cloud4 45s linear infinite alternate;
+  }
+}
+
+/* Transparent scrollbar for Webkit (Chrome, Safari) */
+/* ::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* For Firefox */
+/* * {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+/* } */
