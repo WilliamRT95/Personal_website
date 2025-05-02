@@ -261,8 +261,8 @@ export default function Page() {
         </div>
         <div className='text-gray-400 mx-4 my-1'>
           <p>
-            *This is not a functional login form. It's a display of the switcher
-            functionality from log in to sign up.
+            *This is not a functional login form. It is a display of the
+            switcher functionality from log in to sign up.
           </p>
         </div>
       </div>
