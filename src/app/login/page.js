@@ -38,7 +38,7 @@ export default function Page() {
             className={`transition-all duration-500 relative ${
               activeTab === "signin"
                 ? "w-4/5 md:w-3/5 p-8 z-10"
-                : "w-1/5 md:w-2/5 p-6 z-0 m-1 blur-[0.5px] bg-[url(/images/arches.png)] [writing-mode:vertical-rl] md:[writing-mode:horizontal-tb]"
+                : "w-1/5 md:w-2/5 p-6 z-0 m-1 md:blur-[0.5px] bg-[url(/images/arches.png)] [writing-mode:vertical-rl] md:[writing-mode:horizontal-tb]"
             }`}
           >
             <h2 className='text-2xl font-bold text-gray-800 mb-6'>Sign up</h2>
@@ -145,7 +145,7 @@ export default function Page() {
             className={`transition-all duration-500 relative ${
               activeTab === "login"
                 ? "w-4/5 md:w-3/5 p-8 z-10"
-                : "w-1/5 md:w-2/5 p-6 m-1 blur-[0.5px] bg-[url(/images/arches.png)] [writing-mode:vertical-rl] md:[writing-mode:horizontal-tb]"
+                : "w-1/5 md:w-2/5 p-6 m-1 md:blur-[0.5px] bg-[url(/images/arches.png)] [writing-mode:vertical-rl] md:[writing-mode:horizontal-tb]"
             }`}
           >
             <h2 className='text-2xl font-bold text-gray-800 mb-6'>Log in</h2>
