@@ -11,8 +11,8 @@
   --font-josefin: var(--font-josefin);
   --font-caveat: var(--font-caveat);
   --color-nav: #578fca;
-  --color-buttons: #3674b5;
-  --color-buttons-hoover: #79bcd6;
+  --color-buttons: #4593bb;
+  --color-buttons-hoover: #307699;
 }
 
 /* @media (prefers-color-scheme: dark) {
