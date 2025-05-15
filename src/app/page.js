@@ -68,10 +68,14 @@ export default function Page() {
     setTimeout(() => setIsClicked(false), 500);
 
     // Limit to 4 images max
-    if (spawnedImages.length >= 2) return;
+    if (spawnedImages.length >= 3) return;
 
-    const coconutLinks = ["/login", "/notes"];
-    const coconutImages = ["/images/cocologin.png", "/images/coconotes.png"];
+    const coconutLinks = ["/login", "/notes", "/chatbot"];
+    const coconutImages = [
+      "/images/cocologin.png",
+      "/images/coconotes.png",
+      "/images/cocochat.png",
+    ];
 
     // New Image
     const newImage = {
@@ -131,7 +135,7 @@ export default function Page() {
               />
             </div>
 
-            <p className='left-0 -mt-5 px-4 rounded-2xl pt-1 md:w-fit text-gray-100 bg-[#4593BB] text-center transform skew-y-2'>
+            <p className='left-0 -mt-5 px-4 rounded-2xl pt-1 md:w-fit text-gray-100 bg-buttons text-center transform skew-y-2'>
               I Am Guillem.
             </p>
             <p className='px-3 py-1 mt-2 text-center '>

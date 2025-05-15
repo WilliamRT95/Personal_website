@@ -10,6 +10,7 @@ const links = [
     href: "/login",
   },
   { name: "Notes", href: "/notes" },
+  { name: "ChatBot", href: "/chatbot" },
 ];
 
 export default function NavLinks() {
@@ -23,7 +24,7 @@ export default function NavLinks() {
           <div key={link.name} className='flex items-center'>
             <Link
               href={link.href}
-              className={`px-7 py-3 z-20 font-josefin text-grey-700 rounded-full hover:bg-gray-200 transition duration-300
+              className={`px-5 md:px-7 py-3 z-20 font-josefin text-grey-700 rounded-full hover:bg-gray-200 transition duration-300
                 ${
                   pathName === link.href
                     ? "underline underline-offset-6 decoration-gray-300"
