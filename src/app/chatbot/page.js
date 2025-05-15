@@ -76,11 +76,6 @@ export default function ChatBot() {
     }
   };
 
-  // // Auto-scroll to bottom when messages change
-  // useEffect(() => {
-  //   messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  // }, [messages]);
-
   useEffect(() => {
     const container = document.querySelector("#chat-container");
     if (container) {
@@ -123,7 +118,7 @@ export default function ChatBot() {
               />
             </div>
             <div>
-              <h2 className='font-bold text-lg'>Guillem's assistant</h2>
+              <h2 className='font-bold text-lg'>{"Guillem's assistant"}</h2>
               <p className='text-xs text-blue-100'>Online(I think)</p>
             </div>
           </div>
